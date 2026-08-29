@@ -34,7 +34,7 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <div className="app-container" style={{ border: '2px solid var(--border-color)', margin: '0 auto', maxWidth: '1440px', backgroundColor: 'var(--bg-color)', position: 'relative' }}>
         <Preloader />

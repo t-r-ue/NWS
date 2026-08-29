@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="nav-center" style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
         <Link to="/" style={{ display: 'block' }}>
           <img 
-            src="/logo-actual.png" 
+            src={`${import.meta.env.BASE_URL}logo-actual.png`} 
             alt="Nu Wave Space" 
             style={{ 
               height: '40px',

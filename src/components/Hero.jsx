@@ -142,7 +142,7 @@ const Hero = () => {
               {heroImages.map((src, index) => (
                 <img 
                   key={index}
-                  src={src} 
+                  src={`${import.meta.env.BASE_URL}${src.startsWith('/') ? src.slice(1) : src}`} 
                   alt="Nuwave Space Hero" 
                   style={{ 
                     position: 'absolute',

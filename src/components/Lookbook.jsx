@@ -86,7 +86,7 @@ const Lookbook = () => {
               overflow: 'hidden',
               borderBottom: '2px solid #111'
             }}>
-              <img src={product.mainImg} alt={product.name} className="product-img main-img" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={`${import.meta.env.BASE_URL}${product.mainImg.startsWith('/') ? product.mainImg.slice(1) : product.mainImg}`} alt={product.name} className="product-img main-img" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             
             <div style={{ 
