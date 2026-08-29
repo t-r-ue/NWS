@@ -23,6 +23,15 @@ body {
   overflow-x: hidden;
 }
 
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -137,26 +146,31 @@ a {
   /* Global */
   body { font-size: 14px; }
   
-  /* Navbar */
+  /* Navbar (Mobile Redesign) */
   .navbar {
-    flex-wrap: wrap !important;
     padding: 0.5rem 1rem !important;
   }
-  .nav-left, .nav-right {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 0.5rem;
-    gap: 1rem;
+  .desktop-only {
+    display: none !important;
   }
   .nav-center {
-    width: 100%;
-    order: -1; /* Move logo to top on mobile */
-    margin-bottom: 1rem;
+    justify-content: flex-start !important;
   }
-  .nav-link {
-    margin-right: 0 !important;
-    font-size: 0.8rem;
+  .mobile-menu-btn {
+    display: block !important;
+  }
+  .mobile-nav-link {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #111;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    transition: transform 0.1s ease;
+  }
+  .mobile-nav-link:active {
+    transform: scale(0.95);
   }
 
   /* Hero Section (Mobile Redesign) */
