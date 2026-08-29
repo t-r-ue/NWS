@@ -124,7 +124,7 @@ const Hero = () => {
 
         {/* Right Column (Main Rotating Image) */}
         <div className="hero-image-container" style={{ flex: '1', display: 'flex', justifyContent: 'flex-end', height: '100%' }}>
-          <div style={{ 
+          <div className="hero-image-outer-wrapper" style={{ 
             height: '95%', 
             width: '100%', 
             maxWidth: '650px', 
@@ -132,7 +132,7 @@ const Hero = () => {
             position: 'relative',
             zIndex: 5 
           }}>
-            <div style={{ 
+            <div className="hero-image-inner-wrapper" style={{ 
               position: 'relative',
               width: '100%',
               height: '100%',

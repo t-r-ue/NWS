@@ -164,32 +164,51 @@ a {
     flex-direction: column !important;
     height: auto !important;
     min-height: calc(100vh - 100px);
+    padding: 0 1rem !important;
+    gap: 2rem;
   }
-  .hero-content, .hero-image-container {
+  .hero-content {
     width: 100% !important;
-    height: 50vh !important;
+    height: auto !important;
+    margin-top: 2rem;
+  }
+  .hero-image-container {
+    width: 100% !important;
+    height: auto !important;
+    flex: none !important;
+  }
+  .hero-image-outer-wrapper {
+    height: auto !important;
+    aspect-ratio: 4/5 !important;
   }
   .hero-mantra-box {
-    top: 10% !important;
-    left: 5% !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 0 0 2rem 0 !important; /* Reset negative margins */
+    padding: 1.5rem !important;
     transform: none !important;
-    max-width: 90% !important;
+    max-width: 100% !important;
   }
   .hero-title {
-    font-size: 4rem !important;
+    font-size: 3rem !important;
   }
   .hero-subtitle {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 2rem !important;
   }
 
   /* Lookbook Section */
   .lookbook-scroll-container {
     padding-left: 1rem !important;
+    padding-right: 1rem !important;
     gap: 1rem !important;
+  }
+  .product-card {
+    width: 85vw !important; /* Forces the card to fit standard phone width perfectly */
+    transform: none !important; /* Remove staggered up/down layout */
   }
   .lookbook-title {
     font-size: 2.5rem !important;
-    padding-left: 1rem !important;
   }
 
   /* Footer */
