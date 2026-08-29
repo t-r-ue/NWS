@@ -90,14 +90,14 @@ const Lookbook = () => {
               <img src={`${import.meta.env.BASE_URL}${product.mainImg.startsWith('/') ? product.mainImg.slice(1) : product.mainImg}`} alt={product.name} className="product-img main-img" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             
-            <div style={{ 
+            <div className="product-info-wrapper" style={{ 
               padding: '1rem', 
               display: 'flex', 
               flexDirection: 'column', 
               backgroundColor: '#f4f4f4',
               color: '#111'
             }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div className="product-info-inner" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span style={{ fontSize: '1.2rem', fontWeight: 900, textTransform: 'uppercase' }}>{product.name}</span>
                 <span style={{ fontSize: '1rem', fontWeight: 800, backgroundColor: '#f4c430', padding: '0.2rem 0.5rem', border: '2px solid #111' }}>
                   {product.price}
