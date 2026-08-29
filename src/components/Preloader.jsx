@@ -62,7 +62,7 @@ const Preloader = () => {
         {preloaderImages.map((src, idx) => (
           <img 
             key={idx} 
-            src={src} 
+            src={`${import.meta.env.BASE_URL}${src.startsWith('/') ? src.slice(1) : src}`} 
             alt="preloader frame" 
             style={{
               position: 'absolute',

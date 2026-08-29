@@ -102,16 +102,10 @@ a {
   display: block;
 }
 
-.product-img.hover-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 2;
+.product-card:hover .product-img.main-img { 
+  transform: scale(1.05);
+  filter: contrast(110%);
 }
-
-.product-card:hover .product-img.main-img { opacity: 0; }
-.product-card:hover .product-img.hover-img { opacity: 1; }
 
 .product-info {
   padding: 1rem;
