@@ -1,0 +1,57 @@
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Lookbook from './components/Lookbook';
+import Footer from './components/Footer';
+import Preloader from './components/Preloader';
+import ComingSoon from './components/ComingSoon';
+import './index.css';
+
+// A component to hold the main homepage content
+const Home = () => {
+  return (
+    <>
+      <Hero />
+      <div className="marquee-container">
+        <div className="marquee-content">
+          EFFORTLESSLY COOL • PRE-ORDER OPEN • KIGALI, RWANDA • NO REFUND • EFFORTLESSLY COOL • PRE-ORDER OPEN • KIGALI, RWANDA • NO REFUND • EFFORTLESSLY COOL • PRE-ORDER OPEN • KIGALI, RWANDA • NO REFUND •
+        </div>
+      </div>
+      <Lookbook />
+    </>
+  );
+};
+
+// ScrollToTop component to ensure pages start at the top
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
+function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="app-container" style={{ border: '2px solid var(--border-color)', margin: '0 auto', maxWidth: '1440px', backgroundColor: 'var(--bg-color)', position: 'relative' }}>
+        <Preloader />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<ComingSoon />} />
+          <Route path="/about" element={<ComingSoon />} />
+          <Route path="/cart" element={<ComingSoon />} />
+          <Route path="/login" element={<ComingSoon />} />
+          {/* Catch-all for any other unbuilt pages */}
+          <Route path="*" element={<ComingSoon />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
