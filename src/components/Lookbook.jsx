@@ -1,41 +1,16 @@
 import React from 'react';
 
 const products = [
-  {
-    id: 1,
-    name: 'Get You Tee',
-    price: '15K RWF',
-    mainImg: '/632607218_17992506497920113_7495431679782247317_n.jpg', 
-    hoverImg: '/636641753_17992506488920113_3278892084440527923_n.jpg'
-  },
-  {
-    id: 2,
-    name: 'Progress Tee',
-    price: '15K RWF',
-    mainImg: '/655642888_17996738021920113_5676860781224106845_n.jpg',
-    hoverImg: '/656417724_17996737985920113_2187089452455198975_n.jpg'
-  },
-  {
-    id: 3,
-    name: 'Blend Tee',
-    price: '15K RWF',
-    mainImg: '/656750248_17996738006920113_17740674634963958_n.jpg',
-    hoverImg: '/657338416_17996737994920113_2017476960654955216_n.jpg'
-  },
-  {
-    id: 4,
-    name: 'Graphic Tee',
-    price: '15K RWF',
-    mainImg: '/657444809_17996738012920113_2279165896688950452_n.jpg',
-    hoverImg: '/657484240_17997793172920113_6618895698255734771_n.jpg'
-  },
-  {
-    id: 5,
-    name: 'Classic Tee',
-    price: '15K RWF',
-    mainImg: '/657940054_17997793169920113_9108503276882617958_n.jpg',
-    hoverImg: '/686037730_18003046523920113_5205355407203989715_n.jpg'
-  }
+  { id: 1, name: 'Get You Tee', price: '18K RWF', mainImg: '/632607218_17992506497920113_7495431679782247317_n.jpg' },
+  { id: 2, name: 'Get You Tee (Worn)', price: '18K RWF', mainImg: '/636641753_17992506488920113_3278892084440527923_n.jpg' },
+  { id: 3, name: 'Progress Tee', price: '18K RWF', mainImg: '/655642888_17996738021920113_5676860781224106845_n.jpg' },
+  { id: 4, name: 'Progress Tee (Worn)', price: '18K RWF', mainImg: '/656417724_17996737985920113_2187089452455198975_n.jpg' },
+  { id: 5, name: 'Blend Tee', price: '18K RWF', mainImg: '/656750248_17996738006920113_17740674634963958_n.jpg' },
+  { id: 6, name: 'Blend Tee (Worn)', price: '18K RWF', mainImg: '/657338416_17996737994920113_2017476960654955216_n.jpg' },
+  { id: 7, name: 'Graphic Tee', price: '18K RWF', mainImg: '/657444809_17996738012920113_2279165896688950452_n.jpg' },
+  { id: 8, name: 'Graphic Tee (Worn)', price: '18K RWF', mainImg: '/657484240_17997793172920113_6618895698255734771_n.jpg' },
+  { id: 9, name: 'Classic Tee', price: '18K RWF', mainImg: '/657940054_17997793169920113_9108503276882617958_n.jpg' },
+  { id: 10, name: 'Classic Tee (Worn)', price: '18K RWF', mainImg: '/686037730_18003046523920113_5205355407203989715_n.jpg' }
 ];
 
 const Lookbook = () => {
@@ -112,7 +87,6 @@ const Lookbook = () => {
               borderBottom: '2px solid #111'
             }}>
               <img src={product.mainImg} alt={product.name} className="product-img main-img" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              <img src={product.hoverImg} alt={`${product.name} worn`} className="product-img hover-img" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             
             <div style={{ 
