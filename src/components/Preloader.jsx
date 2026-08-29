@@ -17,12 +17,12 @@ const Preloader = () => {
     // Hyper-speed rotation
     const rotateInterval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % preloaderImages.length);
-    }, 120); // 120ms for very fast but visible rotation
+    }, 200); // 200ms for a cooler, less frantic rotation
 
-    // Remove preloader after 2.5 seconds
+    // Remove preloader after CSS animation completes (2.5s delay + 1.2s fade)
     const removeTimeout = setTimeout(() => {
       setIsVisible(false);
-    }, 2500);
+    }, 3800);
 
     return () => {
       clearInterval(rotateInterval);
@@ -45,7 +45,7 @@ const Preloader = () => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      animation: 'slideUp 0.8s cubic-bezier(0.85, 0, 0.15, 1) 2.5s forwards', // Slides up out of view
+      animation: 'fadeOut 1.2s cubic-bezier(0.65, 0, 0.35, 1) 2.5s forwards', // Smoothly fades out
     }}>
       
       {/* Small Disk Circle for Images */}
@@ -104,9 +104,11 @@ const Preloader = () => {
       </div>
 
       <style>{`
-        @keyframes slideUp {
+        @keyframes fadeOut {
           to {
-            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.05);
           }
         }
         @keyframes loadBar {

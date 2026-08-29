@@ -32,6 +32,23 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Wrapper for page transitions
+const AnimatedRoutes = () => {
+  const location = useLocation();
+  return (
+    <div key={location.pathname} style={{ animation: 'pageFadeIn 0.4s ease-out forwards' }}>
+      <Routes location={location}>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<ComingSoon />} />
+        <Route path="/about" element={<ComingSoon />} />
+        <Route path="/cart" element={<ComingSoon />} />
+        <Route path="/login" element={<ComingSoon />} />
+        <Route path="*" element={<ComingSoon />} />
+      </Routes>
+    </div>
+  );
+};
+
 function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
@@ -39,15 +56,7 @@ function App() {
       <div className="app-container" style={{ border: '2px solid var(--border-color)', margin: '0 auto', maxWidth: '1440px', backgroundColor: 'var(--bg-color)', position: 'relative' }}>
         <Preloader />
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<ComingSoon />} />
-          <Route path="/about" element={<ComingSoon />} />
-          <Route path="/cart" element={<ComingSoon />} />
-          <Route path="/login" element={<ComingSoon />} />
-          {/* Catch-all for any other unbuilt pages */}
-          <Route path="*" element={<ComingSoon />} />
-        </Routes>
+        <AnimatedRoutes />
         <Footer />
       </div>
     </BrowserRouter>

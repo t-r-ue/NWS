@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const products = [
   { id: 1, name: 'Get You Tee', price: '18K RWF', mainImg: '/632607218_17992506497920113_7495431679782247317_n.jpg' },
@@ -36,7 +37,7 @@ const Lookbook = () => {
         }}>
           LATEST DROPS
         </h2>
-        <a href="#all" style={{ 
+        <Link to="/shop" style={{ 
           fontWeight: 900, 
           textTransform: 'uppercase', 
           backgroundColor: '#f4c430', 
@@ -46,7 +47,7 @@ const Lookbook = () => {
           boxShadow: '4px 4px 0px #e63946'
         }}>
           VIEW ALL
-        </a>
+        </Link>
       </div>
       
       {/* Horizontal Scroll Container */}
